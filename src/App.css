@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;800&family=Press+Start+2P&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+body {
+  background: url(./img/fondo2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(70, 69, 69);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+
+/*=========================*/
+.inputName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.textMove {
+  width: 200px;
+  font-size: 40px;
+  font-family: 'Press Start 2P', 'Poppins', cursive;
+}
+
+.nameText {
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  border-color: #FFCB05;
+  text-align: center;
+  font-family: 'Press Start 2P', 'Poppins', cursive;
+  margin: 1rem;
+  font-size: 30px;
+}
+
+.nameText:placeholder-shown {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.buttonEnter {
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+
+}
+
+.imgLogo {
+  width: 300px;
+  margin: 2rem 0;
+}
+
+.imgPoke {
+  width: 150px;
+  margin: 2rem 0;
+}
+
+/*=========================*/
+
+.pokeball {
+  height: 250px;
+  width: 250px;
+  border: 13px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#e5e5e7 125px,
+      #e5e5e7 125px);
+  position: fixed;
+  animation: roll 5s infinite;
+  top: 10px;
+  left: calc(100% - 150px);
+  z-index: -1;
+}
+
+@keyframes roll {
+
+  /* 25% {
+    transform: rotateZ(90deg);
+    transition: 2s ease;
+  } */
+  50% {
+    transform: rotateZ(360deg);
+    transition: 2s ease;
+  }
+
+  /* 100% {
+    transform: rotateZ(360deg);
+  } */
+}
+
+.pokeball::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 250px;
+  background-color: #77C9F9;
+  top: 100px;
+  left: -13px;
+}
+
+.pokeball::after {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 100px;
+  background-image: radial-gradient(#77C9F9 0px, #77C9F9 15px,
+      #e5e5e7 15px, #e5e5e7 30px,
+      #77C9F9 30px);
+  border-radius: 50%;
+  top: 63px;
+  left: 63px;
+}
+
+
+
+/*=========================*/
+.list-pkm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+.poke-item {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 350px;
+  text-decoration: none;
+}
+
+/*============== BARRA DE NAVEGACION  ================*/
+.contNav {
+  border: 7px groove #FBC604;
+  border-radius: 20px;
+  border-top-color: #FBC604;
+  border-right-color: #FBC604;
+  border-bottom-color: #035fe6;
+  border-left-color: #035fe6;
+  background-image: linear-gradient(177.03deg, #e5e5e7e7 -11.97%, #e5e5e771 71.28%, grey 135.64%);
+  height: 130px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contNav>h2 {
+  color: #e62d14;
+  font-size: 25px;
+  margin: 0.25rem;
+}
+
+.contNav>h3 {
+  margin: 0.25rem;
+}
+
+.inputSearchPoke {
+  width: 200px;
+  height: 40px;
+  border-bottom-color: #e62d14;
+  border-top-right-radius: 0;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.buttSearchPoke {
+  width: 70px;
+  height: 40px;
+  border-top-color: #e62d14;
+  border-bottom-color: #e62d14;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.buttSearchPoke:active {
+  width: 100px;
+  height: 40px;
+  transition: 0.1s ease;
+  position: relative;
+}
+
+.listTypePoke {
+  width: 200px;
+  height: 40px;
+  border-width: 2px;
+  border-style: double;
+  border-top-color: #e62d14;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 0;
+}
+
+/*============== PAGINACION  ================*/
+.pageNumbers {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.pageNumbers>li {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+
+}
+
+.active {
+  border: 2px solid rgb(224, 33, 33);
+  background-color: rgb(224, 33, 33);
+  color: whitesmoke;
+  border-radius: 8px;
+}
+
+.buttPg {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid rgb(224, 33, 33);
+  border-radius: 20px;
+}
+
+.buttPg:active {
+  background-color: rgb(224, 33, 33);
+  color: #e5e5e7;
+}
+
+
+/*============== CARD POKEDESK  ================*/
+.poke-item:hover .poke-card {
+  transform: rotateY(180deg);
+}
+
+.poke-card {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+.front-card {
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: whitesmoke;
+  border: 6px solid gray;
+  border-radius: 23px;
+  width: 250px;
+  height: 350px;
+
+}
+
+.backgroundPokeImg {
+  background-color: gray;
+  width: 238px;
+  height: 150px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  margin-bottom: 5.5rem;
+}
+
+.front-card>img {
+  width: 200px;
+  height: 220px;
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  /* border: 2px solid salmon; */
+}
+
+.pokeNameFront {
+  font-size: 25px;
+}
+
+.contTypePoke {
+  display: flex;
+  justify-content: center;
+}
+
+.front-card>h3 {
+  font-weight: 300;
+}
+
+.back-card {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: whitesmoke;
+  border: 6px solid gray;
+  border-radius: 23px;
+  width: 250px;
+  height: 350px;
+}
+
+.back-card>img {
+  border: 2px solid salmon;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 10px;
+  left: 44px;
+}
+
+
+/*============== Detalles Pokemon ================*/
+
+
+.pokeDetail {
+  background-color: aliceblue;
+  margin: 7rem 1rem;
+  padding: 0.2rem;
+}
+
+.backgroundPokeDetail {
+  background-color: gray;
+  /* width: 238px; */
+  height: 100px;
+}
+
+.imgPokeDetail {
+  width: 150px;
+  height: 225px;
+  position: absolute;
+  top: 20px;
+  left: 30%;
+  /* border: 4px solid salmon; */
+}
+
+/**/
+.titlePokeDetail {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  left: 15%;
+}
+
+.namePokeDetail {
+  text-align: center;
+  position: relative;
+  margin: 1rem;
+}
+
+.namePokeDetail>span {
+  background: aliceblue;
+  z-index: 100;
+  position: relative;
+  padding: 15px;
+  font-size: 27px;
+}
+
+.namePokeDetail::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  top: 50%;
+  background: rgb(197, 193, 193);
+  z-index: 50;
+}
+
+/**/
+.contDimenPoke {
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-template-columns: 50px 50px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "weiTitle heiTitle"
+    "wei hei";
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.weiTitle {
+  grid-area: weiTitle;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.wei {
+  grid-area: wei;
+}
+
+.heiTitle {
+  grid-area: heiTitle;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.hei {
+  grid-area: hei;
+}
+
+/**/
+.featuresPoke{
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 6px 1fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    "typeTitle . skillsTitle"
+    "typeDate . skillsDate";
+    
+  align-content: center;
+  justify-content: space-evenly;
+}
+.typeTitle{
+  grid-area: typeTitle;
+}
+.contTypeDate{
+  grid-area: typeDate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.skillsTitle{
+  grid-area: skillsTitle;
+}
+.contSkillsDate{
+  grid-area: skillsDate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.caj{
+  border: 2px solid grey;
+  max-width: 125px;
+  height: 40px;
+  padding: 0.5rem;
+}
+
+/**/
+.progress-bar{
+  width: 290px;
+  height: 15px;
+  background: var(--blanco);
+  border-radius: 10px ;
+  box-shadow: 1px 1px 10px var(--sombra);
+  border-bottom: 2px solid rgba(225, 225, 225, 0.809);
+  border-right: 3px solid rgb(225,225,225,0.4);
+  margin: 0.5rem 0;
+
+}
+.progress-bar__percentage{
+  width: var(--w);
+  height: 100%;
+  background: var(--celeste);
+  border-radius: 10px ;
+  animation: Aumentar 5s ease;
+}
+@keyframes Aumentar{
+  0%{width:0%;}
+  100%{width:var(--w)}
+}
+
+.contBarStat{
+  padding: 0.2rem 2rem;
+}
+.statsTitle{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/**/
+.contListMove{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem;
+  margin: 1rem;
+}
+.listMovePoke{
+  font-size: 12px;
+  font-weight: 300;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding: 5px;
+}
