@@ -89,7 +89,7 @@ const PokeDetail = () => {
                     <h3>MOVES</h3>
                     <div className='contListMove'>
                         {
-                            pokemonDetail.moves.map(moves => (
+                            pokemonDetail.moves?.map(moves => (
                                 <h4 style={{borderColor: colorCardType?.color[1] }} className='listMovePoke'>{moves.move.name}</h4>
                             ))
                         }
