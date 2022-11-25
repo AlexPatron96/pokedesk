@@ -433,7 +433,7 @@ body {
 }
 
 /**/
-.featuresPoke{
+.featuresPoke {
   padding: 0.5rem 2rem;
   display: grid;
   grid-template-columns: 1fr 6px 1fr;
@@ -441,31 +441,38 @@ body {
   grid-template-areas:
     "typeTitle . skillsTitle"
     "typeDate . skillsDate";
-    
+
   align-content: center;
   justify-content: space-evenly;
 }
-.typeTitle{
+
+.typeTitle {
   grid-area: typeTitle;
 }
-.contTypeDate{
+
+.contTypeDate {
   grid-area: typeDate;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  align-items: center;
 }
-.skillsTitle{
+
+.skillsTitle {
   grid-area: skillsTitle;
 }
-.contSkillsDate{
+
+.contSkillsDate {
   grid-area: skillsDate;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  align-items: center;
 }
-.caj{
+
+.caj {
   border: 2px solid grey;
   max-width: 125px;
   height: 40px;
@@ -473,46 +480,55 @@ body {
 }
 
 /**/
-.progress-bar{
+.progress-bar {
   width: 290px;
   height: 15px;
   background: var(--blanco);
-  border-radius: 10px ;
+  border-radius: 10px;
   box-shadow: 1px 1px 10px var(--sombra);
   border-bottom: 2px solid rgba(225, 225, 225, 0.809);
-  border-right: 3px solid rgb(225,225,225,0.4);
+  border-right: 3px solid rgb(225, 225, 225, 0.4);
   margin: 0.5rem 0;
 
 }
-.progress-bar__percentage{
+
+.progress-bar__percentage {
   width: var(--w);
   height: 100%;
   background: var(--celeste);
-  border-radius: 10px ;
+  border-radius: 10px;
   animation: Aumentar 5s ease;
 }
-@keyframes Aumentar{
-  0%{width:0%;}
-  100%{width:var(--w)}
+
+@keyframes Aumentar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: var(--w)
+  }
 }
 
-.contBarStat{
+.contBarStat {
   padding: 0.2rem 2rem;
 }
-.statsTitle{
+
+.statsTitle {
   font-size: 12px;
   font-weight: 600;
 }
 
 /**/
-.contListMove{
+.contListMove {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0.15rem;
   margin: 1rem;
 }
-.listMovePoke{
+
+.listMovePoke {
   font-size: 12px;
   font-weight: 300;
   border: 2px solid grey;
